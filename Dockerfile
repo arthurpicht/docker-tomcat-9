@@ -1,4 +1,4 @@
-FROM arthurpicht/jdk-13:latest
+FROM arthurpicht/adoptopenjdk-11:latest
 
 ENV DOCKER_NAME="tomcat-9"
 ENV TIME_ZONE="Europe/Berlin"
@@ -10,9 +10,9 @@ ENV PATH $CATALINA_HOME/bin:$PATH
 # COPY tomcat.tar.gz .
 
 RUN set -eux; \
-	export TOMCAT_URL="https://archive.apache.org/dist/tomcat/tomcat-9/v9.0.30/bin/apache-tomcat-9.0.30.tar.gz"; \
+	export TOMCAT_URL="https://archive.apache.org/dist/tomcat/tomcat-9/v9.0.46/bin/apache-tomcat-9.0.46.tar.gz"; \
 	export TOMCAT_FILE=tomcat.tar.gz; \
-	export TOMCAT_SHA512_URL="https://archive.apache.org/dist/tomcat/tomcat-9/v9.0.30/bin/apache-tomcat-9.0.30.tar.gz.sha512"; \
+	export TOMCAT_SHA512_URL="https://archive.apache.org/dist/tomcat/tomcat-9/v9.0.46/bin/apache-tomcat-9.0.46.tar.gz.sha512"; \
 	export TOMCAT_SHA512_FILE=tomcat.tar.gz.sha512; \
 	wget -O "$TOMCAT_FILE" "$TOMCAT_URL"; \
 	wget -O "$TOMCAT_SHA512_FILE" "$TOMCAT_SHA512_URL"; \
