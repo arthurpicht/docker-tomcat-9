@@ -9,7 +9,7 @@ based on
 ## Build image locally
 
     docker build -t arthurpicht/debian-10:latest https://github.com/arthurpicht/docker-debian-10.git
-    docker build -t arthurpicht/adoptopenjdk-11:latest https://github.com/arthurpicht/docker-adoptOpenJDK-11.git 
+    docker build -t arthurpicht/adoptopenjdk-11:latest https://github.com/arthurpicht/docker-adoptOpenJDK-11.git#develop 
     docker build -t arthurpicht/tomcat-9:latest https://github.com/arthurpicht/docker-tomcat-9.git
 
 ## Current version level
