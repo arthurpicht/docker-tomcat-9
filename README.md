@@ -15,3 +15,5 @@ based on
 ## Current version level
 
 * 2021-05-21: Tomcat 9.0.46, AdoptOpenJDK 11.0.11+9, Debian 10.9
+* 2021-06-29: Tomcat 9.0.48, AdoptOpenJDK 11.0.11+9, Debain 10.10
+
