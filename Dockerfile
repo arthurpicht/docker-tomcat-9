@@ -6,9 +6,6 @@ ENV TIME_ZONE="Europe/Berlin"
 ENV CATALINA_HOME /man/tomcat
 ENV PATH $CATALINA_HOME/bin:$PATH
 
-# TEMP: cache file locally, dev-time only
-# COPY tomcat.tar.gz .
-
 RUN set -eux; \
 	export TOMCAT_URL="https://archive.apache.org/dist/tomcat/tomcat-9/v9.0.80/bin/apache-tomcat-9.0.80.tar.gz"; \
 	export TOMCAT_FILE=tomcat.tar.gz; \
@@ -28,7 +25,7 @@ RUN set -eux; \
 		--no-same-owner \
 	; \
 	rm "$TOMCAT_FILE"; \
-	echo "$TOMCAT_URL" >> /.components; 
+	echo "[$(date)]  [$DOCKER_NAME] [$TOMCAT_URL]" >> /.components;
 
 EXPOSE 8080
 CMD ["catalina.sh", "run"]
