@@ -6,7 +6,7 @@ Dockerfile for my arthurpicht/tomcat-9 image, based on
 
 ## Build image locally
 
-    docker build --pull --no-cache -t arthurpicht/debian-12:latest https://github.com/arthurpicht/docker-debian-12.git
+    docker build --pull --no-cache -t arthurpicht/debian-12:latest https://github.com/arthurpicht/docker-debian-12.git#develop
     docker build --no-cache -t arthurpicht/adoptopenjdk-17:latest https://github.com/arthurpicht/docker-adoptOpenJDK-17.git#develop 
     docker build --no-cache -t arthurpicht/tomcat-9:latest https://github.com/arthurpicht/docker-tomcat-9.git
 
