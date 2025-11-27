@@ -7,7 +7,7 @@ ENV CATALINA_HOME=/man/tomcat
 ENV PATH=$CATALINA_HOME/bin:$PATH
 
 RUN set -eux; \
-	export TOMCAT_VERSION=$(curl --silent https://archive.apache.org/dist/tomcat/tomcat-9/ | grep v9 | tail -n 1 | grep -oE 'v[0-9]+\.[0-9]+\.[0-9]+' | tail -n 1); \
+	export TOMCAT_VERSION="v$(curl --silent https://archive.apache.org/dist/tomcat/tomcat-9/ | grep -oE 'v9\.[0-9]+\.[0-9]+' | tr -d 'v' | sort -t. -k1,1n -k2,2n -k3,3n | tail -n 1)"; \
 	echo ">>> latest Tomcat version: ${TOMCAT_VERSION}"; \
 	export TOMCAT_URL="https://archive.apache.org/dist/tomcat/tomcat-9/${TOMCAT_VERSION}/bin/apache-tomcat-${TOMCAT_VERSION#v}.tar.gz"; \
 	export TOMCAT_FILE=tomcat.tar.gz; \
