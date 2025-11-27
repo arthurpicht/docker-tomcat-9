@@ -2,18 +2,19 @@
 
 Dockerfile for my arthurpicht/tomcat-9 image, based on
 [arthurpicht/adoptopenjdk-21](https://github.com/arthurpicht/docker-adoptOpenJDK-21), based on
-[arthurpicht/debian-12](https://github.com/arthurpicht/docker-debian-12).
+[arthurpicht/debian-13](https://github.com/arthurpicht/docker-debian-13).
 
 ## Build image locally
 
 In order to build image including all dependent base images execute:
 
-    docker build --no-cache -t arthurpicht/debian-12:latest https://github.com/arthurpicht/docker-debian-12.git#develop
+    docker build --no-cache -t arthurpicht/debian-13:latest https://github.com/arthurpicht/docker-debian-12.git#develop
     docker build --no-cache -t arthurpicht/adoptopenjdk-21:latest https://github.com/arthurpicht/docker-adoptOpenJDK-21.git#develop 
     docker build --no-cache -t arthurpicht/tomcat-9:latest https://github.com/arthurpicht/docker-tomcat-9.git
 
 ## Current version level
 
+* 2025-11-27: tweaked for three-digit patch level version number
 * 2024-11-14: dynamically bind latest version of Tomcat 9
 * 2024-11-13: Tomcat 9.0.97, AdoptOpenJDK 21.0.5+11, Debain 12.8
 * 2024-06-13: Tomcat 9.0.89, AdoptOpenJDK 21.0.3+9, Debian 12.5
