@@ -3,8 +3,8 @@ FROM arthurpicht/adoptopenjdk-21:latest
 ENV DOCKER_NAME="tomcat-9"
 ENV TIME_ZONE="Europe/Berlin"
 
-ENV CATALINA_HOME /man/tomcat
-ENV PATH $CATALINA_HOME/bin:$PATH
+ENV CATALINA_HOME=/man/tomcat
+ENV PATH=$CATALINA_HOME/bin:$PATH
 
 RUN set -eux; \
 	export TOMCAT_VERSION=$(curl --silent https://archive.apache.org/dist/tomcat/tomcat-9/ | grep v9 | tail -n 1 | grep -oE 'v[0-9]+\.[0-9]+\.[0-9]+' | tail -n 1); \
